@@ -1,15 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-=======
-import React from 'react';
->>>>>>> 4cd43c1e76c3766387f4b2782df60088b3496d99
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 import { NAV_LINKS } from '../../utils/constants';
 
 export const Navigation = ({ isDark, toggleTheme }) => {
-<<<<<<< HEAD
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollPosition = useScrollPosition();
   const isScrolled = scrollPosition > 20;
@@ -27,30 +22,11 @@ export const Navigation = ({ isDark, toggleTheme }) => {
           <div className="flex-shrink-0 group cursor-pointer" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <div className="flex flex-col leading-none">
               <h1 className="text-sm font-black uppercase tracking-[0.32em] text-text-main group-hover:text-[#35d0c2] transition-colors">CRISTOBAL PIÑA R.</h1>
-=======
-  const scrollPosition = useScrollPosition();
-  const isScrolled = scrollPosition > 20;
-
-  return (
-    <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'border-b border-black/5 bg-white/75 backdrop-blur-xl dark:border-white/10 dark:bg-black/70 py-0' 
-        : 'bg-transparent py-2'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex-shrink-0">
-            <div className="flex flex-col leading-none">
-              <h1 className="text-sm font-black uppercase tracking-[0.32em] text-text-main">CRISTOBAL PIÑA R.</h1>
->>>>>>> 4cd43c1e76c3766387f4b2782df60088b3496d99
               <span className="mt-1 text-[10px] uppercase tracking-[0.32em] text-text-muted">Software Engineer</span>
             </div>
           </div>
           
-<<<<<<< HEAD
           {/* Desktop Navigation */}
-=======
->>>>>>> 4cd43c1e76c3766387f4b2782df60088b3496d99
           <div className="hidden md:flex items-center space-x-8">
             {NAV_LINKS.map((link) => (
               <a 
@@ -63,11 +39,7 @@ export const Navigation = ({ isDark, toggleTheme }) => {
             ))}
           </div>
 
-<<<<<<< HEAD
           <div className="flex items-center gap-4">
-=======
-          <div className="flex items-center gap-3">
->>>>>>> 4cd43c1e76c3766387f4b2782df60088b3496d99
             <div
               className="theme-switch scale-90"
               role="switch"
@@ -88,7 +60,6 @@ export const Navigation = ({ isDark, toggleTheme }) => {
               </span>
             </div>
 
-<<<<<<< HEAD
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -166,11 +137,6 @@ export const Navigation = ({ isDark, toggleTheme }) => {
           </>
         )}
       </AnimatePresence>
-=======
-          </div>
-        </div>
-      </div>
->>>>>>> 4cd43c1e76c3766387f4b2782df60088b3496d99
     </nav>
   );
 };
