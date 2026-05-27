@@ -32,7 +32,8 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        # Eliminamos 'version: 9' ya que pnpm lo detectará automáticamente de package.json
+        with:
+          version: 9.15.9
 
       - name: Set up Node
         uses: actions/setup-node@v4
