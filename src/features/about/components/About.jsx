@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import TemplateCard from '../ui/TemplateCard';
-import SectionHeader from '../ui/SectionHeader';
-import Badge from '../ui/Badge';
-import { TECHNOLOGIES } from '../../utils/constants';
+import TemplateCard from '@shared/ui/TemplateCard';
+import SectionHeader from '@shared/ui/SectionHeader';
+import Badge from '@shared/ui/Badge';
+import { TECHNOLOGIES } from '@shared/utils/constants';
 
 export const About = () => {
   return (

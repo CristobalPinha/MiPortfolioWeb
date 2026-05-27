@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SectionHeader from '../ui/SectionHeader';
-import Badge from '../ui/Badge';
-import Button from '../ui/Button';
+import SectionHeader from '@shared/ui/SectionHeader';
+import Badge from '@shared/ui/Badge';
+import Button from '@shared/ui/Button';
 
 export const Projects = () => {
   const projects = [

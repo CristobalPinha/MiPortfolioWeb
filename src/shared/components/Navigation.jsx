@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import { useScrollPosition } from '../../hooks/useScrollPosition';
-import { NAV_LINKS } from '../../utils/constants';
+import { useScrollPosition } from '@shared/hooks/useScrollPosition';
+import { NAV_LINKS } from '@shared/utils/constants';
 
 export const Navigation = ({ isDark, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import DownloadButton from '../ui/DownloadButton';
-import TemplateCard from '../ui/TemplateCard';
-import Badge from '../ui/Badge';
-import Button from '../ui/Button';
-import AvatarSVG from '../ui/AvatarSVG';
-import { Decoration, SectionBackground } from '../ui/Decoration';
+import DownloadButton from '@shared/ui/DownloadButton';
+import TemplateCard from '@shared/ui/TemplateCard';
+import Badge from '@shared/ui/Badge';
+import Button from '@shared/ui/Button';
+import AvatarSVG from '@shared/ui/AvatarSVG';
+import { Decoration, SectionBackground } from '@shared/ui/Decoration';
 
 export const Hero = ({ onDemoClick, onLearnMore }) => {
   return (

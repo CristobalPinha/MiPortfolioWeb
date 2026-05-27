@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Navigation } from './components/layout/Navigation';
-import { Hero } from './components/features/Hero';
-import { About } from './components/features/About';
-import { Projects } from './components/features/Projects';
-import { Experience } from './components/features/Experience';
-import { Footer } from './components/layout/Footer';
+import { Navigation } from '@shared/components/Navigation';
+import { Hero } from '@features/hero/components/Hero';
+import { About } from '@features/about/components/About';
+import { Projects } from '@features/projects/components/Projects';
+import { Experience } from '@features/experience/components/Experience';
+import { Footer } from '@shared/components/Footer';
+import './App.css';
 import './index.css';
 
 function App() {

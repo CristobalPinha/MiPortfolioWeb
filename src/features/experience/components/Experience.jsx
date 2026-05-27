@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SectionHeader from '../ui/SectionHeader';
+import SectionHeader from '@shared/ui/SectionHeader';
 
 export const Experience = () => {
   const services = [
