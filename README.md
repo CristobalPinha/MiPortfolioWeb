@@ -1,61 +1,62 @@
-# Project - Cristóbal Piña R.
+# MiPortfolioWeb - Cristóbal Piña R.
 
-Portfolio profesional
+Portfolio profesional desarrollado con un enfoque en accesibilidad, data science y una arquitectura moderna.
 
 ## 🏗️ Arquitectura: Feature-Driven Architecture (FDA)
 
-Este proyecto utiliza un patrón **FDA**, lo que permite una escalabilidad total y un desacoplamiento de componentes. La estructura se organiza en:
+Este proyecto utiliza el patrón **FDA**, lo que permite una escalabilidad total y un desacoplamiento de componentes. La estructura se organiza de la siguiente manera:
 
-- **Features**: Módulos independientes por sección (Hero, About, Projects, Experience). Cada feature es *self-contained*.
-- **UI Library**: Componentes atómicos reutilizables (Botones, Badges, Cards) con estética Mac-style.
-- **Shared**: Lógica compartida, hooks y utilidades globales.
+- **Features**: Módulos independientes por sección (`hero`, `about`, `projects`, `experience`). Cada feature es *self-contained*.
+- **Shared**: Recursos reutilizables compartidos en todo el proyecto.
+  - **UI**: Componentes atómicos con estética *Mac-style* y *Glassmorphism*.
+  - **Components**: Elementos de layout global como navegación y footer.
+  - **Hooks & Utils**: Lógica de React reutilizable y constantes globales.
 
 ### Estructura del Proyecto
 
 ```
 src/
-├── components/
-│   ├── features/      # Secciones de la página con lógica propia
-│   ├── ui/            # Sistema de diseño y átomos visuales
-│   └── layout/        # Estructura global (Navbar, Footer)
-├── hooks/             # Lógica de React reutilizable (useScroll)
-├── utils/             # Constantes y funciones puras (Iconos, Enlaces)
+├── features/          # Características principales (Hero, About, etc.)
+│   └── [feature]/
+│       └── components/
+├── shared/            # Recursos compartidos
+│   ├── components/    # Layout global
+│   ├── ui/            # Sistema de diseño
+│   ├── hooks/         # Lógica reutilizable
+│   └── utils/         # Constantes y funciones
 └── assets/            # Recursos estáticos
 ```
 
 ## ✨ Características Técnicas
 
-- **React 19 + Vite**: Rendimiento de nueva generación.
-- **Tailwind CSS**: Diseño atómico y responsivo.
-- **Dark Mode First**: Gestión de tema con persistencia.
-- **Accesibilidad**: Enfoque radical en semántica y navegación.
-- **Glassmorphism**: Estética moderna basada en capas y desenfoques.
+- **React 19 + Vite**: Aprovechando las últimas mejoras de rendimiento y hooks.
+- **Alias de Rutas**: Configuración de `@features`, `@shared` y `@assets` para imports limpios.
+- **Tailwind CSS**: Estilizado atómico, responsivo y optimizado.
+- **Framer Motion**: Animaciones fluidas y estados de interacción avanzados.
+- **Dark Mode**: Soporte nativo para modo oscuro/claro.
+- **Accesibilidad**: Enfoque radical en semántica y navegación inclusiva.
 
-## 🚀 Próximas Etapas
+## 🚀 Instalación y Uso
 
-- [ ] **Fase 5: Finalización de Contenido**: Completar el apartado de **Proyectos** y la sección de **Alcances** con casos de uso Reales.
-- [ ] **Fase 6: Proyecto Secreto**: Desarrollo de componente experimental para la base del portfolio.
-
-## Instalación
+Este proyecto utiliza `pnpm` como gestor de paquetes.
 
 ```bash
-git clone https://github.com/CristobalPinha/WebPortfolio.git
-cd WebPortfolio
+# Clonar el repositorio
+git clone https://github.com/CristobalPinha/MiPortfolioWeb.git
+
+# Instalar dependencias
 pnpm install
-```
 
-## Desarrollo
-
-```bash
+# Iniciar servidor de desarrollo
 pnpm dev
-```
 
-```bash
-pnpm dev
-```
-
-## Build
-
-```bash
+# Construir para producción
 pnpm build
 ```
+
+## 🛠️ Próximas Etapas
+
+- [ ] **Fase Siguiente: Contenido Real**: Completar el apartado de proyectos con casos de éxito.
+
+---
+Desarrollado con ❤️ por [Cristóbal Piña Rivas](https://github.com/CristobalPinha)
