@@ -28,21 +28,20 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
               className="min-h-[550px]"
               innerClassName="flex flex-col justify-between p-5"
             >
-              <div className="rounded-[1.5rem] border border-black/10 dark:border-white/10 bg-background-secondary/80 dark:bg-[linear-gradient(180deg,#262626_0%,#171717_100%)] p-6 relative overflow-hidden">
-                <div className="absolute -left-12 -top-12 w-32 h-32 rounded-full bg-[#35d0c2]/5 blur-2xl"></div>
-                
-                <div className="flex justify-center relative">
-                  <div className="profileImage flex h-[240px] w-[240px] items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(145deg,#3b3b3b,#1f1f1f)] shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative group">
-                    <div className="absolute inset-0 bg-[#35d0c2]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
-                    <img 
-                      src={profileImg} 
-                      alt="Cristobal Piña Rivas" 
-                      className="h-full w-full object-cover relative z-10 transition-transform duration-700 ease-out group-hover:scale-105" 
-                    />
+              <div className="p-0 relative">
+                <div className="flex justify-center">
+                  <div className="group">
+                    <div className="rounded-2xl overflow-hidden h-[240px] w-[240px] shadow-2xl ring-1 ring-black/5 dark:ring-white/5 transition-transform duration-500 group-hover:scale-105">
+                      <img 
+                        src={profileImg} 
+                        alt="Cristobal Piña Rivas" 
+                        className="h-full w-full object-cover relative z-10 transition-transform duration-700 ease-out group-hover:scale-105" 
+                      />
+                    </div>
                   </div>
                 </div>
 
-                <div className="mt-6 flex flex-col items-center gap-3 relative z-30">
+                <div className="mt-6 flex flex-col items-center gap-3">
                   <div className="flex gap-2">
                     <a 
                       href={SOCIAL_LINKS.github} 
@@ -92,7 +91,7 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
                     <div className="h-[1px] flex-1 bg-[#35d0c2]/20"></div>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {['Machine Learning', 'Data Science', 'Accesibilidad Web'].map((value) => (
+                    {['Machine Learning', 'Data Science', 'Accesibilidad Web', 'Backend', 'Full Stack'].map((value) => (
                       <Badge key={value}>{value}</Badge>
                     ))}
                   </div>

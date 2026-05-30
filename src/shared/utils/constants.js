@@ -19,8 +19,8 @@ import { MdLayers } from 'react-icons/md';
 export const NAV_LINKS = [
   { name: 'Inicio', href: '#hero' },
   { name: 'Sobre mí', href: '#about' },
-  { name: 'Experiencia', href: '#experience' },
   { name: 'Proyectos', href: '#projects' },
+  { name: 'Servicios', href: '#experience' },
 ];
 
 export const SOCIAL_LINKS = {
