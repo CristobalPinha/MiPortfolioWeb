@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { useScrollPosition } from '@shared/hooks/useScrollPosition';
-import { NAV_LINKS } from '@shared/utils/constants';
+import { NAV_LINKS, SOCIAL_LINKS } from '@shared/utils/constants';
 
 export const Navigation = ({ isDark, toggleTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -126,9 +126,22 @@ export const Navigation = ({ isDark, toggleTheme }) => {
                   <div className="flex flex-col gap-4">
                     <span className="text-[10px] uppercase tracking-[0.3em] text-text-muted">Encuéntrame en:</span>
                     <div className="flex gap-4 text-text-main/60">
-                      {/* Aquí podrían ir iconos de redes sociales si existieran en constants */}
-                      <span className="text-[11px] font-bold cursor-pointer hover:text-[#35d0c2]">LINKEDIN</span>
-                      <span className="text-[11px] font-bold cursor-pointer hover:text-[#35d0c2]">GITHUB</span>
+                      <a 
+                        href={SOCIAL_LINKS.linkedin} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-[11px] font-bold cursor-pointer hover:text-[#35d0c2]"
+                      >
+                        LINKEDIN
+                      </a>
+                      <a 
+                        href={SOCIAL_LINKS.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-[11px] font-bold cursor-pointer hover:text-[#35d0c2]"
+                      >
+                        GITHUB
+                      </a>
                     </div>
                   </div>
                 </div>

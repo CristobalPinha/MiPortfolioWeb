@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import DownloadButton from '@shared/ui/DownloadButton';
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaDownload } from 'react-icons/fa';
 import TemplateCard from '@shared/ui/TemplateCard';
 import Badge from '@shared/ui/Badge';
 import Button from '@shared/ui/Button';
-import AvatarSVG from '@shared/ui/AvatarSVG';
+import profileImg from '../assets/profile.png';
+import { SOCIAL_LINKS } from '@shared/utils/constants';
 import { Decoration, SectionBackground } from '@shared/ui/Decoration';
 
 export const Hero = ({ onDemoClick, onLearnMore }) => {
@@ -23,26 +24,63 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
             className="relative mx-auto w-full max-w-[430px] lg:max-w-[480px]"
           >
             <TemplateCard 
-              title="Template System v1.0"
-              className="min-h-[640px]"
+              title="Profile v1.0"
+              className="min-h-[550px]"
               innerClassName="flex flex-col justify-between p-5"
             >
-              <div className="rounded-[1.5rem] border border-black/10 dark:border-white/10 bg-background-secondary/80 dark:bg-[linear-gradient(180deg,#262626_0%,#171717_100%)] p-4 relative overflow-hidden">
+              <div className="rounded-[1.5rem] border border-black/10 dark:border-white/10 bg-background-secondary/80 dark:bg-[linear-gradient(180deg,#262626_0%,#171717_100%)] p-6 relative overflow-hidden">
                 <div className="absolute -left-12 -top-12 w-32 h-32 rounded-full bg-[#35d0c2]/5 blur-2xl"></div>
                 
                 <div className="flex justify-center relative">
-                  <div className="profileImage flex h-[290px] w-[220px] items-center justify-center overflow-hidden rounded-[1.35rem] bg-[linear-gradient(145deg,#3b3b3b,#1f1f1f)] shadow-[5px_10px_20px_rgba(0,0,0,0.33)] border border-white/5 relative group">
-                    <div className="absolute inset-0 bg-[#35d0c2]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <AvatarSVG className="h-[178px] w-[178px] relative z-10" />
+                  <div className="profileImage flex h-[240px] w-[240px] items-center justify-center overflow-hidden rounded-2xl bg-[linear-gradient(145deg,#3b3b3b,#1f1f1f)] shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/10 relative group">
+                    <div className="absolute inset-0 bg-[#35d0c2]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20"></div>
+                    <img 
+                      src={profileImg} 
+                      alt="Cristobal Piña Rivas" 
+                      className="h-full w-full object-cover relative z-10 transition-transform duration-700 ease-out group-hover:scale-105" 
+                    />
                   </div>
                 </div>
 
-                <div className="mt-5 flex flex-col items-center gap-3 relative">
-                  <DownloadButton 
-                    href="/cv-cristobal-pina-rivas.pdf" 
-                    fileName="cv-cristobal-pina-rivas.pdf" 
-                    tooltip="Size: 1.2Mb"
-                  />
+                <div className="mt-6 flex flex-col items-center gap-3 relative z-30">
+                  <div className="flex gap-2">
+                    <a 
+                      href={SOCIAL_LINKS.github} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg border border-black/15 bg-white/70 text-text-main backdrop-blur-md hover:border-[#35d0c2]/60 hover:text-[#127c73] dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:text-[#6ee7dd] transition-all duration-300"
+                      title="GitHub"
+                    >
+                      <FaGithub className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href={SOCIAL_LINKS.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg border border-black/15 bg-white/70 text-text-main backdrop-blur-md hover:border-[#35d0c2]/60 hover:text-[#127c73] dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:text-[#6ee7dd] transition-all duration-300"
+                      title="LinkedIn"
+                    >
+                      <FaLinkedin className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href={SOCIAL_LINKS.instagram} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg border border-black/15 bg-white/70 text-text-main backdrop-blur-md hover:border-[#35d0c2]/60 hover:text-[#127c73] dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:text-[#6ee7dd] transition-all duration-300"
+                      title="Instagram"
+                    >
+                      <FaInstagram className="w-5 h-5" />
+                    </a>
+                    <a 
+                      href={SOCIAL_LINKS.whatsapp} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-lg border border-black/15 bg-white/70 text-text-main backdrop-blur-md hover:border-[#35d0c2]/60 hover:text-[#127c73] dark:border-white/15 dark:bg-white/5 dark:text-white dark:hover:text-[#6ee7dd] transition-all duration-300"
+                      title="WhatsApp"
+                    >
+                      <FaWhatsapp className="w-5 h-5" />
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -83,6 +121,13 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-4xl lg:pt-8"
           >
+            <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[#35d0c2]/10 border border-[#35d0c2]/30">
+                <span className="w-2 h-2 rounded-full bg-[#35d0c2] animate-pulse"></span>
+                <span className="text-xs font-medium text-[#35d0c2]">Buscando práctica profesional</span>
+              </div>
+            </div>
+
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.92] tracking-[-0.05em] text-text-main">
               CRISTOBAL<br />PIÑA RIVAS
             </h1>
@@ -100,11 +145,21 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
             ></motion.div>
 
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted md:text-xl lg:text-2xl">
-              Ingeniero en Informática en constante evolución. Combino mi experiencia creando interfaces web accesibles con el análisis profundo de datos. Como profesional en formación, mi mayor herramienta es la curiosidad: siempre buscando aprender nuevas tecnologías y transformar ese aprendizaje en soluciones con impacto real.            </p>
+              Ingeniero en Informática en constante evolución. Combino mi experiencia creando interfaces web accesibles con el análisis profundo de datos. Como profesional en formación, mi mayor herramienta es la curiosidad: siempre buscando aprender nuevas tecnologías y transformar ese aprendizaje en soluciones con impacto real.
+            </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Button onClick={onDemoClick} variant="primary">Ver proyectos</Button>
               <Button onClick={onLearnMore} variant="outline">Sobre mí</Button>
+              <a 
+                href="/cv-cristobal-pina-rivas.pdf" 
+                download="cv-cristobal-pina-rivas.pdf"
+                className="group inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 text-sm font-black uppercase tracking-[0.18em] bg-gradient-to-r from-[#35d0c2] to-[#2ab5a8] text-white shadow-lg hover:shadow-[0_0_30px_rgba(53,208,194,0.4)] dark:shadow-[0_0_30px_rgba(53,208,194,0.3)] transition-all duration-300 hover:-translate-y-1 border border-[#35d0c2]/30"
+                title="Descargar CV - 1.2 Mb"
+              >
+                <FaDownload className="w-5 h-5 group-hover:animate-bounce" />
+                CV
+              </a>
             </div>
           </motion.div>
           

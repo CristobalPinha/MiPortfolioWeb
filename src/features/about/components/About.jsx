@@ -18,7 +18,7 @@ export const About = () => {
         className="max-w-6xl mx-auto"
       >
         <SectionHeader 
-          overline="Mi perfil" 
+          overline="INFORMACIÓN" 
           title="SOBRE MÍ" 
           highlight="MÍ" 
         />

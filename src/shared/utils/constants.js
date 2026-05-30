@@ -25,9 +25,11 @@ export const NAV_LINKS = [
 
 export const SOCIAL_LINKS = {
   github: 'https://github.com/CristobalPinha',
-  linkedin: 'https://linkedin.com/in/tu-perfil',
+  linkedin: 'https://www.linkedin.com/in/cristobbalp',
+  instagram: 'https://www.instagram.com/cristobbal27/',
   email: 'cristobbalp@gmail.com',
-  number: '+56 9 6507 6547'
+  number: '+56 9 6507 6547',
+  whatsapp: 'https://wa.me/56965076547'
 };
 
 export const TECHNOLOGIES = [
