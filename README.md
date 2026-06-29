@@ -4,6 +4,7 @@
 
 **Software Engineer · Accesibilidad Web & Data Science · UTEM 2026**
 
+<a href="https://cristobalpinha.github.io/MiPortfolioWeb/"><img src="https://img.shields.io/badge/Ver%20Portfolio-35d0c2?style=flat-square&logo=vercel&logoColor=white" /></a>
 <a href="https://github.com/CristobalPinha"><img src="https://img.shields.io/badge/GitHub-CristobalPinha-181717?style=flat-square&logo=github&logoColor=white" /></a>
 <a href="https://www.linkedin.com/in/cristobbalp"><img src="https://img.shields.io/badge/LinkedIn-cristobbalp-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
 <a href="mailto:cristobbalp@gmail.com"><img src="https://img.shields.io/badge/Email-cristobbalp@gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
