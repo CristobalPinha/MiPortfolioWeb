@@ -1,4 +1,3 @@
-import React from 'react';
 
 /**
  * Badge component for tags, skills and small labels.

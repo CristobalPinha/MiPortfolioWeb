@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaDownload } from 'react-icons/fa';
 import TemplateCard from '@shared/ui/TemplateCard';

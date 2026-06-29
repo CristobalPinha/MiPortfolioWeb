@@ -1,4 +1,3 @@
-import React from 'react';
 
 /**
  * The avatar/svg image inside the Hero card.

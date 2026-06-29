@@ -1,4 +1,3 @@
-import React from 'react';
 import { SOCIAL_LINKS, NAV_LINKS } from '@shared/utils/constants';
 import { SiGithub } from 'react-icons/si';
 import { FaLinkedin } from 'react-icons/fa';

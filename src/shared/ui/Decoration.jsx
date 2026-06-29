@@ -1,4 +1,3 @@
-import React from 'react';
 
 /**
  * Animated Gradient backgrounds and decorative shapes for sections.

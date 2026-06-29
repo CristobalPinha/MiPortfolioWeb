@@ -1,4 +1,3 @@
-import React from 'react';
 
 /**
  * TemplateCard component that replicates the "Mac-style" window look

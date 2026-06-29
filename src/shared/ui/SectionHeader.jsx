@@ -1,4 +1,3 @@
-import React from 'react';
 
 /**
  * Standardized Section Header for the portfolio.

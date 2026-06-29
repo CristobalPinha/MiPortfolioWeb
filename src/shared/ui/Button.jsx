@@ -1,4 +1,3 @@
-import React from 'react';
 
 /**
  * Common Button component for the portfolio.

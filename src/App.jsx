@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Navigation } from '@shared/components/Navigation';
 import { Hero } from '@features/hero/components/Hero';
 import { About } from '@features/about/components/About';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import TemplateCard from '@shared/ui/TemplateCard';
 import SectionHeader from '@shared/ui/SectionHeader';

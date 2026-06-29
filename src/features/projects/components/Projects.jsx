@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SiPython, SiDjango, SiMysql, SiDocker, SiGithubactions, SiElectron, SiNodedotjs, SiExpress, SiOpenai, SiPandas, SiNumpy, SiScikitlearn, SiJupyter } from 'react-icons/si';
 import SectionHeader from '@shared/ui/SectionHeader';
