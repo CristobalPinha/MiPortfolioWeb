@@ -34,7 +34,7 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
                     <div className="rounded-2xl overflow-hidden h-[240px] w-[240px] shadow-2xl ring-1 ring-black/5 dark:ring-white/5 transition-transform duration-500 group-hover:scale-105">
                       <img 
                         src={profileImg} 
-                        alt="Cristobal Piña Rivas" 
+                        alt="Cristóbal Piña Rivas" 
                         className="h-full w-full object-cover relative z-10 transition-transform duration-700 ease-out group-hover:scale-105" 
                       />
                     </div>
@@ -103,7 +103,7 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
                     <div className="h-[1px] flex-1 bg-white/5"></div>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {['Buenas Prácticas', 'Liderazgo', 'Trabajo en Equipo'].map((value) => (
+                    {['Buenas Prácticas', 'Liderazgo', 'Trabajo en Equipo', 'Comunicación Efectiva', 'Pensamiento Crítico'].map((value) => (
                       <Badge key={value} variant="outline">{value}</Badge>
                     ))}
                   </div>
@@ -128,7 +128,7 @@ export const Hero = ({ onDemoClick, onLearnMore }) => {
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.92] tracking-[-0.05em] text-text-main">
-              CRISTOBAL<br />PIÑA RIVAS
+              CRISTÓBAL<br />PIÑA RIVAS
             </h1>
 
             <p className="mt-5 text-sm md:text-base uppercase tracking-[0.34em] text-text-muted">

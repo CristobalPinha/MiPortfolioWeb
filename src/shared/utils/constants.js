@@ -1,48 +1,37 @@
 import {
-  SiGithub,
-  SiPython,
-  SiJavascript,
-  SiHtml5,
-  SiReact,
-  SiNodedotjs,
-  SiDjango,
-  SiMongodb,
-  SiTailwindcss,
+  SiPython, SiDjango, SiMysql, SiDocker,
+  SiJavascript, SiReact, SiNodedotjs, SiElectron,
+  SiPandas, SiScikitlearn, SiJupyter,
 } from 'react-icons/si';
-import { FaGitAlt, FaCss3Alt } from 'react-icons/fa';
-import { MdLayers } from 'react-icons/md';
-
-/**
- * Global constants for the portfolio.
- */
+import { FaGitAlt } from 'react-icons/fa';
 
 export const NAV_LINKS = [
-  { name: 'Inicio', href: '#hero' },
+  { name: 'Inicio',    href: '#hero' },
   { name: 'Sobre mí', href: '#about' },
   { name: 'Proyectos', href: '#projects' },
   { name: 'Servicios', href: '#experience' },
 ];
 
 export const SOCIAL_LINKS = {
-  github: 'https://github.com/CristobalPinha',
-  linkedin: 'https://www.linkedin.com/in/cristobbalp',
+  github:    'https://github.com/CristobalPinha',
+  linkedin:  'https://www.linkedin.com/in/cristobbalp',
   instagram: 'https://www.instagram.com/cristobbal27/',
-  email: 'cristobbalp@gmail.com',
-  number: '+56 9 6507 6547',
-  whatsapp: 'https://wa.me/56965076547'
+  email:     'cristobbalp@gmail.com',
+  number:    '+56 9 6507 6547',
+  whatsapp:  'https://wa.me/56965076547'
 };
 
 export const TECHNOLOGIES = [
-  { name: 'GitHub', icon: SiGithub },
-  { name: 'Git', icon: FaGitAlt },
-  { name: 'Python', icon: SiPython },
-  { name: 'JavaScript', icon: SiJavascript },
-  { name: 'HTML5', icon: SiHtml5 },
-  { name: 'CSS3', icon: FaCss3Alt },
-  { name: 'React', icon: SiReact },
-  { name: 'Node.js', icon: SiNodedotjs },
-  { name: 'Django', icon: SiDjango },
-  { name: 'MongoDB', icon: SiMongodb },
-  { name: 'Tailwind', icon: SiTailwindcss },
-  { name: 'LM Studio', icon: MdLayers }
+  { name: 'Python',       icon: SiPython,      color: '#3776AB' },
+  { name: 'Django',       icon: SiDjango,      color: '#44B78B' },
+  { name: 'MySQL',        icon: SiMysql,       color: '#4479A1' },
+  { name: 'Docker',       icon: SiDocker,      color: '#2496ED' },
+  { name: 'JavaScript',   icon: SiJavascript,  color: '#F7DF1E' },
+  { name: 'React',        icon: SiReact,       color: '#61DAFB' },
+  { name: 'Node.js',      icon: SiNodedotjs,   color: '#339933' },
+  { name: 'Electron',     icon: SiElectron,    color: '#47848F' },
+  { name: 'Pandas',       icon: SiPandas,      color: '#150458' },
+  { name: 'Scikit-Learn', icon: SiScikitlearn, color: '#F7931E' },
+  { name: 'Jupyter',      icon: SiJupyter,     color: '#F37626' },
+  { name: 'Git',          icon: FaGitAlt,      color: '#F05032' },
 ];

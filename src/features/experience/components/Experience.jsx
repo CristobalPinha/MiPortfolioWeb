@@ -1,78 +1,131 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {
+  SiDjango, SiDocker, SiElectron, SiOpenai, SiScikitlearn, SiPandas,
+} from 'react-icons/si';
 import SectionHeader from '@shared/ui/SectionHeader';
 
-export const Experience = () => {
-  const services = [
-    {
-      title: 'Lorem Ipsum Service',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      tech: 'Copy • Design tokens • Theme'
-    },
-    {
-      title: 'Consectetur Adipiscing',
-      description: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      tech: 'React • Components • Layout'
-    },
-    {
-      title: 'Sed Do Eiusmod',
-      description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-      tech: 'Content strategy • CMS-ready'
-    },
-    {
-      title: 'Tempor Incididunt',
-      description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      tech: 'Tailwind • Gradients • Motion'
-    },
-    {
-      title: 'Labore Et Dolore',
-      description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.',
-      tech: 'Maintainability • Scalability'
-    },
-    {
-      title: 'Magna Aliqua',
-      description: 'Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.',
-      tech: 'Scalability • Maintainability'
-    }
-  ];
+const services = [
+  {
+    Icon: SiDjango,
+    color: '#44B78B',
+    title: 'Backend & API REST',
+    description: 'Diseño e implementación de APIs RESTful documentadas, arquitecturas relacionales y lógica de negocio robusta. Desde el modelado de datos hasta el despliegue en producción.',
+    tech: ['Python', 'Django', 'MySQL', 'REST Framework'],
+  },
+  {
+    Icon: SiDocker,
+    color: '#2496ED',
+    title: 'DevOps & CI/CD',
+    description: 'Pipelines de integración y despliegue continuo que automatizan el ciclo completo de desarrollo, eliminando fricciones entre entorno local y producción.',
+    tech: ['Docker', 'GitHub Actions', 'Automatización'],
+  },
+  {
+    Icon: SiElectron,
+    color: '#47848F',
+    title: 'Apps de Escritorio',
+    description: 'Aplicaciones de escritorio multiplataforma (Windows / macOS) con integración de servicios internos, arquitectura modular y experiencia de usuario accesible.',
+    tech: ['Electron', 'Node.js', 'Express'],
+  },
+  {
+    Icon: SiOpenai,
+    color: '#74AA9C',
+    title: 'IA Local & Voz',
+    description: 'Integración de LLMs y reconocimiento de voz completamente locales, sin dependencias externas. Agentes de UI, asistentes y STT para entornos offline.',
+    tech: ['LM Studio', 'Phi-4', 'faster-whisper'],
+  },
+  {
+    Icon: SiScikitlearn,
+    color: '#F7931E',
+    title: 'Machine Learning',
+    description: 'Modelamiento supervisado comparativo con manejo estricto de desbalanceo de clases y validación estadística rigurosa orientada a problemas del mundo real.',
+    tech: ['Scikit-Learn', 'Random Forest', 'SMOTE'],
+  },
+  {
+    Icon: SiPandas,
+    color: '#4DABCF',
+    title: 'Datos & Explicabilidad',
+    description: 'Transformación de datos complejos en insights accionables mediante IA Explicable (XAI), identificando causas, pesos y factores determinantes de cada predicción.',
+    tech: ['Pandas', 'SHAP', 'LIME', 'Jupyter'],
+  },
+];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 28 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] },
+  }),
+};
+
+export const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-4">
+    <section id="experience" className="py-24 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <SectionHeader 
-            title="Servicios y Alcance" 
-            highlight="Alcance" 
+          <SectionHeader
+            title="Servicios y Alcance"
+            highlight="Alcance"
             overline="Lo que ofrezco"
           />
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div 
-              key={index} 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {services.map((service, i) => (
+            <motion.div
+              key={i}
+              custom={i}
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="card-hover p-8 rounded-[1.8rem] bg-background-secondary border border-[#35d0c2]/10 dark:border-white/5 hover:border-[#35d0c2]/30 shadow-lg dark:shadow-none transition-all duration-300"
+              className="group relative p-px rounded-2xl"
             >
-              <div className="mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-[#35d0c2]/10 flex items-center justify-center mb-4">
-                  <div className="w-6 h-6 rounded-full bg-[#35d0c2]/20 border border-[#35d0c2]/40"></div>
+              {/* Glow border on hover */}
+              <div
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{ background: `linear-gradient(135deg, ${service.color}40, transparent 60%)` }}
+              />
+
+              <div className="relative h-full rounded-[calc(1rem-1px)] bg-background-secondary border border-[#35d0c2]/10 group-hover:border-[service.color]/20 p-7 flex flex-col transition-colors duration-300">
+
+                {/* Icon */}
+                <div
+                  className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
+                  style={{ backgroundColor: `${service.color}18`, border: `1px solid ${service.color}28` }}
+                >
+                  <service.Icon style={{ color: service.color }} className="w-5 h-5" />
                 </div>
-              </div>
-              <h3 className="text-2xl font-black text-text-main mb-3">{service.title}</h3>
-              <p className="text-text-muted leading-relaxed mb-4">
-                {service.description}
-              </p>
-              <div className="text-[10px] font-black uppercase tracking-[0.2em] text-[#35d0c2]">
-                {service.tech}
+
+                {/* Title */}
+                <h3 className="text-lg font-black text-text-main mb-3 leading-tight">
+                  {service.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-sm text-text-muted leading-relaxed flex-1">
+                  {service.description}
+                </p>
+
+                {/* Tech tags */}
+                <div className="flex flex-wrap gap-1.5 mt-5 pt-5 border-t border-[#35d0c2]/8">
+                  {service.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="text-[10px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 rounded-full"
+                      style={{ backgroundColor: `${service.color}12`, color: service.color }}
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
               </div>
             </motion.div>
           ))}
